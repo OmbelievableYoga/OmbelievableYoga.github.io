@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ombelievable Yoga - Yoga Tutorial</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <img src="images/logo.png" style="width: 50px; height: 50px; float: left;">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Ombelievable Yoga</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html#myCarousel">Home</a></li>
+          <li><a href="index.html#About">About</a></li>
+          <li><a href="index.html#Poses">Poses</a></li>
+          <li><a href="index.html#FAQ">FAQ</a></li>
+          <li><a href="index.html#Contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<br><br>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <h4>Options</h4>
+      <p><a href="#">Previous Pose</a></p>
+      <p><a href="#">Next Pose</a></p>
+      <p><a href="#">End Session</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+
+      <br>
+          <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button id="searchByText" type="button" class="btn btn-default dropdown-toggle" style="border-radius: 0;" data-toggle="dropdown" aria-expanded="false">Search By <b>Title</b> <span class="caret"></span></button>
+        <ul class="dropdown-menu" id="searchBy" role="menu">
+          <li><a href="#Title">Title</a></li>
+          <li><a href="#Keyword">Keyword</a></li>
+          <li><a href="#Author">Author</a></li>
+        </ul>
+        <button class="btn btn-default" type="button" onclick="window.location.href='search.html';">Search</button>
+    </span>
+    </div>
+    <hr>
+
+      <h1>Video Title</h1>
+      <br>
+      <!-- from: https://developers.google.com/youtube/iframe_api_reference -->
+
+      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+      <center><div id="player"></div></center>
+
+      <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+      </script>
+
+      <br>
+      <p>Video Description</p>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac magna leo. Sed sollicitudin, sapien a fermentum tempor, tellus lorem consequat turpis, sed maximus arcu tellus in arcu. Nunc faucibus porttitor lacus quis consequat. Integer molestie non massa sit amet bibendum. Nullam nec nibh nulla. Cras mi velit, euismod at eros eget, scelerisque dapibus ante. Etiam in mollis urna. Etiam rhoncus orci eget lorem volutpat, non cursus enim rhoncus. Fusce sagittis erat libero, eu molestie urna efficitur a. Vivamus at ipsum id lorem porttitor ullamcorper. In in ornare nunc. Nullam sit amet odio elit. Praesent ullamcorper eu ante volutpat imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin ac metus vel lorem rhoncus convallis. Nam pulvinar non neque in luctus. Donec ut iaculis dolor. Vestibulum id sapien lacus. Phasellus semper consectetur ipsum non pellentesque. Ut tempus, leo non convallis molestie, dolor metus feugiat nulla, vel condimentum augue nisl et eros. Curabitur dictum neque quis ex bibendum malesuada. Mauris massa nibh, euismod a commodo quis, tincidunt quis sapien. Etiam molestie semper enim, eget varius ante lacinia porta.</p>
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <h4>Up next</h4>
+      <br>
+      <div class="well" style="height: 110px;">
+        <p>Next video</p>
+      </div>
+      <div class="well" style="height: 110px;">
+        <p>Queued video</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>References</p>
+    <br>
+    <div class="row">
+    <div class="col-sm-4">
+        <p style="font-size: 12px;"><b>Information from:</b> <br> YogaJournal <br> YogaBasics </p>
+    </div>
+    <div class="col-sm-4">
+        <p style="font-size: 12px;"><b>Images and audio from:</b> <br> Youtube <br> WallpapersWeb <br> Pintrest <br> Disney Tsum Tsum <br> Yale Arts</p>
+    </div>
+    <div class="col-sm-4">
+        <p style="font-size: 12px;"><b>Code reference:</b> <br> w3school <br> tutorialsPoint <br> React</p>
+    </div>
+  </div>
+  <hr>
+  <p style="font-size: 10px;">Ombelievable Yoga 2018, SEG3125 Project, University of Ottawa | This non-profit website is for educational purposes. Users are responsible for their own risk and injuries</p>
+  <br>
+  <img src="images/clap.gif" class="container-fluid" align="middle" style="height:132px;max-width: 100%;">
+</footer>
+
+</body>
+</html>
