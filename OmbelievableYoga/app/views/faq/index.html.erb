@@ -1,0 +1,65 @@
+<div class="container-fluid" style="padding-top:50px; padding-bottom: 50px; color: #000; background-color: #fff;">
+  <center><h3>FAQ</h3></center> <!-- from: https://www.yogajournal.com/meditation/yoga-questions-answered -->
+    <div style="margin-left: 32px;margin-right: 32px;">
+    <button class="accordion">What is Yoga?</button>
+    <div class="panel">
+        <p>The word yoga, from the Sanskrit word yuj, means to yoke or bind, and is often interpreted as "union" or a method of discipline. A male who practices yoga is called a yogi, a female practitioner, a yogini.</p>
+
+        <p>The Indian sage Patanjali is believed to have collated the practice of yoga into the Yoga Sutra an estimated 2,000 years ago. The Sutra is a collection of 195 statements that serves as a philosophical guidebook for most of the yoga that is practiced today. It also outlines eight limbs of yoga: the yamas (restraints), niyamas (observances), asana (postures), pranayama (breathing), pratyahara (withdrawal of senses), dharana (concentration), dhyani (meditation), and samadhi (absorption). As we explore these eight limbs, we begin by refining our behavior in the outer world, and then we focus inwardly until we reach samadhi (liberation, enlightenment).</p>
+
+        <p>Today, most people practicing yoga are engaged in the third limb, asana, which is a program of physical postures designed to purify the body and provide the physical strength and stamina required for long periods of meditation.</p>
+    </div>
+
+    <button class="accordion">What does Om mean?</button>
+    <div class="panel">
+        <p>Om is a mantra, or vibration, that is traditionally chanted at the beginning and end of yoga sessions. It is said to be the sound of the universe. What does that mean?</p>
+
+        <p>Somehow the ancient yogis knew what scientists today are telling us—that the entire universe is moving. Nothing is ever solid or still. Everything that exists pulsates, creating a rhythmic vibration that the ancient yogis acknowledged with the sound of Om. We may not always be aware of this sound in our daily lives, but we can hear it in the rustling of the autumn leaves, the waves on the shore, the inside of a seashell.</p>
+
+        <p>Chanting Om allows us to recognize our experience as a reflection of how the whole universe moves—the setting sun, the rising moon, the ebb and flow of the tides, the beating of our hearts. As we chant Om, it takes us for a ride on this universal movement, through our breath, our awareness, and our physical energy, and we begin to sense a bigger connection that is both uplifting and soothing.</p>
+    </div>
+
+    <button class="accordion">How many times per week should I practice?</button>
+    <div class="panel">
+        <p>Yoga is amazing—even if you only practice for one hour a week, you will experience the benefits of the practice. If you can do more than that, you will certainly experience more benefits. I suggest starting with two or three times a week, for an hour or an hour and a half each time. If you can only do 20 minutes per session, that's fine too. Don't let time constraints or unrealistic goals be an obstacle—do what you can and don't worry about it. You will likely find that after a while your desire to practice expands naturally and you will find yourself doing more and more.</p>
+    </div>
+
+    <button class="accordion">How is Yoga different drom stretching or other kinds of fitness?</button>
+    <div class="panel">
+        <p>Unlike stretching or fitness, yoga is more than just physical postures. Patanjali's eight-fold path illustrates how the physical practice is just one aspect of yoga. Even within the physical practice, yoga is unique because we connect the movement of the body and the fluctuations of the mind to the rhythm of our breath. Connecting the mind, body, and breath helps us to direct our attention inward. Through this process of inward attention, we learn to recognize our habitual thought patterns without labeling them, judging them, or trying to change them. We become more aware of our experiences from moment to moment. The awareness that we cultivate is what makes yoga a practice, rather than a task or a goal to be completed. Your body will most likely become much more flexible by doing yoga, and so will your mind.</p>
+    </div>
+
+    <button class="accordion">I'm not flexible — can I do Yoga?</button>
+    <div class="panel">
+        <p>Yes! You are a perfect candidate for yoga. Many people think that they need to be flexible to begin yoga, but that's a little bit like thinking that you need to be able to play tennis in order to take tennis lessons. Come as you are and you will find that yoga practice will help you become more flexible.</p>
+
+        <p>This newfound agility will be balanced by strength, coordination, and enhanced cardiovascular health, as well as a sense of physical confidence and overall well-being.</p>
+    </div>
+
+    <button class="accordion">What do I need to begin?</button>
+    <div class="panel">
+        <p>All you really need to begin practicing yoga is your body, your mind, and a bit of curiosity. But it is also helpful to have a pair of yoga leggings, or shorts, and a t-shirt that's not too baggy. No special footgear is required because you will be barefoot. It's nice to bring a towel to class with you. As your practice develops you might want to buy your own yoga mat, but most studios will have mats and other props available for you.</p>
+    </div>
+
+        <button class="accordion">Why Are You Supposed to Refrain From Eating 2–3 Hours Before Class?</button>
+    <div class="panel">
+        <p>In yoga practice we twist from side to side, turn upside down, and bend forward and backward. If you have not fully digested your last meal, it will make itself known to you in ways that are not comfortable. If you are a person with a fast-acting digestive system and are afraid you might get hungry or feel weak during yoga class, experiment with a light snack such as yogurt, a few nuts, or juice about 30 minutes to an hour before class.</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
+    </div>
+  </div>
