@@ -64,3 +64,5 @@
        transition: max-height 0.2s ease-out;
        margin-bottom: 0;
    }
+
+   .row.content {height:auto;}

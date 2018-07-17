@@ -5,6 +5,25 @@
   </div>
 </div>
 
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search for...">
+<span class="input-group-btn">
+<button id="searchByText" type="button" class="btn btn-default dropdown-toggle" style="border-radius: 0;" data-toggle="dropdown" aria-expanded="false">Search By <b>Title</b> <span class="caret"></span></button>
+<ul class="dropdown-menu" id="searchBy" role="menu">
+<li><a href="#Title">Title</a></li>
+<li><a href="#Keyword">Keyword</a></li>
+<li><a href="#Author">Author</a></li>
+</ul>
+<button class="btn btn-default" type="button" onclick="window.location.href='search.html';">Search</button>
+</span>
+</div>
+
+<% @poses.each do |pose| %>
+<p><%= pose.title%> <p>
+<p><%= pose.description%> <p>
+<p><%= link_to 'View', pose_path(pose) %></p>
+<% end %>
+
 <div id="Beginner" class="container-fluid bg-3 text-center" style="padding-top:50px; padding-bottom: 50px;">
   <h3>Beginner Poses</h3><br>
   <div class="row">

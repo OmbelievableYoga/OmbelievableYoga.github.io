@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Pose.create(title: 'Pose1', description:"Pose1 Description", difficulty:'Easy', videoId:'579834')
+Pose.create(title: 'Pose2', description:"Pose2 Description", difficulty:'Intermediate', videoId:'5798000034')
+Pose.create(title: 'Pose3', description:"Pose3 Description", difficulty:'Advanced', videoId:'57987421111134')
