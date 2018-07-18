@@ -243,3 +243,7 @@ footer {
       font-size: 150px;
   }
 }
+.btn-workout {
+    color: #007389;
+    height: auto;
+}
