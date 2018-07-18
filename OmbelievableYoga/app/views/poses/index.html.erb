@@ -1,9 +1,11 @@
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Yoga Poses</h1>
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Yoga Poses</h2>
     <p>Learn about the individual poses</p>
-  </div>
 </div>
+</div>
+<br>
 
 <div class="input-group">
 <input type="text" class="form-control" placeholder="Search for...">
@@ -18,74 +20,18 @@
 </span>
 </div>
 
-<% @poses.each do |pose| %>
-<p><%= pose.title%> <p>
-<p><%= pose.description%> <p>
-<p><%= link_to 'View', pose_path(pose) %></p>
-<% end %>
-
 <div id="Beginner" class="container-fluid bg-3 text-center" style="padding-top:50px; padding-bottom: 50px;">
-  <h3>Beginner Poses</h3><br>
   <div class="row">
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
+    <% @poses.each do |pose| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="<%= asset_path('Poses/1.jpg')%>" class="img-responsive" style="width:100%" alt="Image">
+        <div class="caption">
+          <h3><%= pose.title%> </h3>
+          <p><a><%= link_to 'View Pose', pose_path(pose), :class =>"btn btn-default" %></a></p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-  </div>
-</div><br>
-
-<div id="Intermediate" class="container-fluid bg-3 text-center" style="padding-top:50px; padding-bottom: 50px;">
-  <h3>Intermediate Poses</h3><br>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-  </div>
-</div><br>
-
-<div id="Advanced" class="container-fluid bg-3 text-center" style="padding-top:50px; padding-bottom: 50px;">
-  <h3>Advanced Poses</h3><br>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-    <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Pose name</p>
-    </div>
-  </div>
-</div><br><br>
+    <% end %>
+  </div> <br>
+</div>

@@ -5,6 +5,7 @@ class CreatePoses < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :difficulty
       t.string :videoId
+      t.text :imageSrc
 
       t.timestamps
     end

@@ -12,11 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_07_15_023451) do
 
-  create_table "poses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "poses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "difficulty"
     t.string "videoId"
+    t.text "imageSrc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
